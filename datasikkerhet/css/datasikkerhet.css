@@ -1,0 +1,162 @@
+a{
+    text-decoration: none;
+    font-family: 'Inconsolata', monospace;
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+h1{
+    font-family: 'Inconsolata', monospace;
+    color: #213B7A;
+    text-align: center;
+    font-size: 40px;
+    border:solid;
+    background-color: whitesmoke;
+    border-radius: 50px;
+}
+
+
+h2{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+
+h3{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    text-align: center;
+}
+
+ul{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+
+}
+
+
+h5 {
+    font-family: 'Inconsolata', monospace;
+    text-align: right;
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+img{
+    border-radius: 5px;
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+
+
+div.grid{
+
+
+    display: grid;
+    grid-template-areas:
+            "header"
+            "main"
+            "aside1"
+            "aside2"
+            "nav"
+            "footer"
+;
+    grid-gap: 4px;
+}
+
+div.grid_1{
+
+
+    display: grid;
+    grid-template-areas:
+            "header"
+            "main"
+            "footer"
+            "aside2"
+            "aside1"
+            "nav"
+;
+    grid-gap: 4px;
+}
+
+
+div.header{
+    grid-area: header;
+    background-color:transparent;
+    border-radius: 4px;
+}
+
+div.main{
+    grid-area: main;
+    background-color: ghostwhite;
+    border-radius: 4px;
+}
+
+div.aside1{
+    grid-area: aside1;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+
+}
+
+div.aside2{
+    grid-area: aside2;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+div.nav{
+    grid-area: nav;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+
+div.footer{
+    grid-area: footer;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+
+
+
+@media(min-width: 1000px){
+
+    div.grid{
+        grid-template-columns: 400px 3fr;
+        grid-template-areas:
+                "header     header"
+                "aside1       main"
+                "aside2       main"
+                "nav          main"
+                "footer     footer"
+    ;}
+
+}
+
+@media(min-width: 1000px){
+
+    div.grid_1{
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+                "header     header      header"
+                "main       main        main"
+                "footer     footer      footer"
+                "aside1     aside2      nav"
+
+    ;}
+
+}
