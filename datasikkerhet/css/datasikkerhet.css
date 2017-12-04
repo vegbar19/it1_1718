@@ -1,19 +1,24 @@
+body{
+    background-color:#4A525A;
+}
 a{
     text-decoration: none;
     font-family: 'Inconsolata', monospace;
-    color: black;
+    color: #F5E9E2;
     font-weight: 400;
     font-size: 20px;
 }
 
 h1{
-    font-family: 'Inconsolata', monospace;
-    color: #213B7A;
+    font-family: 'Play', sans-serif;
+    font-weight: 500;
+    color: #F5E9E2;
     text-align: center;
     font-size: 40px;
     border:solid;
-    background-color: whitesmoke;
+    background-color:#508484;
     border-radius: 50px;
+    letter-spacing: 3px;
 }
 
 
@@ -39,9 +44,9 @@ ul{
 
 h5 {
     font-family: 'Inconsolata', monospace;
-    text-align: right;
-    color: white;
-    text-decoration: underline;
+    text-align:center;
+    color:#F5E9E2;
+    text-decoration: wavy;
 }
 
 
@@ -51,8 +56,20 @@ img{
     margin-left:auto;
     margin-right: auto;
     display: block;
-}
 
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Inconsolata', monospace;
+    text-align:center;
+    color:black;
+    border-collapse: collapse;
+    border: black;
+}
+th{
+    text-decoration: underline ;
+}
 
 
 
@@ -61,12 +78,10 @@ div.grid{
 
     display: grid;
     grid-template-areas:
-            "header"
-            "main"
-            "aside1"
-            "aside2"
-            "nav"
-            "footer"
+            "home       aside2     aside1       nav"
+            "header     header     header       header"
+            "main       main       main         main"
+            "footer     footer     footer       footer"
 ;
     grid-gap: 4px;
 }
@@ -76,15 +91,18 @@ div.grid_1{
 
     display: grid;
     grid-template-areas:
-            "header"
-            "main"
-            "footer"
-            "aside2"
-            "aside1"
-            "nav"
+            "aside2     aside1      nav"
+            "header     header      header"
+            "main       main        main"
+            "footer     footer      footer"
 ;
     grid-gap: 4px;
 }
+
+
+
+
+
 
 
 div.header{
@@ -95,68 +113,136 @@ div.header{
 
 div.main{
     grid-area: main;
-    background-color: ghostwhite;
+    background-color:#EBEBEB;
     border-radius: 4px;
+    padding: 20px;
 }
 
 div.aside1{
     grid-area: aside1;
-    background-color: white;
-    border-radius: 4px;
+    background-color: #4C061D;
+    border-radius: 5px;
     text-align: center;
 
 }
 
 div.aside2{
     grid-area: aside2;
-    background-color: white;
-    border-radius: 4px;
+    background-color: #4C061D;
+    border-radius: 5px;
     text-align: center;
 }
 
 
 div.nav{
     grid-area: nav;
-    background-color: white;
-    border-radius: 4px;
+    background-color:#4C061D;
+    border-radius: 5px;
     text-align: center;
 }
 
 div.footer{
     grid-area: footer;
-    background-color: white;
+    background-color: #4C061D;
     border-radius: 4px;
+    text-align: center;
+}
+
+div.home {
+    grid-area: home;
+    background-color: #4C061D;
+    border-radius: 5px;
     text-align: center;
 }
 
 
 
+div.aside1:hover{
+    background-color:#600020;
+}
+
+div.aside2:hover{
+    background-color:#600020;
+}
+div.nav:hover{
+    background-color:#600020;
+}
+div.home:hover{
+    background-color:#600020;
+}
 
 
-@media(min-width: 1000px){
+@media(max-width: 1000px){
 
     div.grid{
-        grid-template-columns: 400px 3fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:
-                "header     header"
-                "aside1       main"
-                "aside2       main"
-                "nav          main"
-                "footer     footer"
+                "home       aside2      aside1      nav"
+                "header     header      header      header"
+                "main       main        main        main"
+                "footer     footer      footer      footer"
+
     ;}
 
 }
 
-@media(min-width: 1000px){
+@media(max-width: 1000px){
 
     div.grid_1{
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-                "header     header      header"
-                "main       main        main"
-                "footer     footer      footer"
-                "aside1     aside2      nav"
+                "header       header      header"
+                "aside2       aside1      nav"
+                "footer       footer      footer"
+                "nav          main        main"
 
     ;}
 
 }
+
+
+@media(max-width: 600px){
+
+    div.grid{
+        grid-template-columns:100%;
+        grid-template-areas:
+                "home"
+                "aside1"
+                "aside2"
+                "nav"
+                "header"
+                "main"
+                "footer"
+
+    ;
+    }
+img{
+    width: 230px;
+}
+
+}
+
+
+@media(max-width: 600px){
+
+    div.grid_1{
+        grid-template-columns:100%;
+        grid-template-areas:
+                "aside1"
+                "aside2"
+                "nav"
+                "header"
+                "main"
+                "footer"
+
+    ;
+    }
+    img{
+        width: 230px;
+    }
+
+}
+
+
+
+
